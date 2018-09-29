@@ -1,9 +1,15 @@
-import React from 'react';
 
-const album = () => (
-  <section className="album">
-    album page will go here
-  </section>
-);
+import React, { Component } from 'react';
 
-export default album;
+
+class Album extends Component {
+  render() {
+    return (
+      <section className="album">
+        {this.props.match.params.slug} Album will go here 
+      </section>
+    );
+  }
+}
+
+export default Album;
